@@ -1,0 +1,30 @@
+=============================
+How to use the MyList class
+=============================
+
+This module provides a class `MyList` that inherits from `list`.
+
+Importing the class:
+>>> MyList = __import__('1-my_list').MyList
+
+Creating an empty instance:
+>>> m = MyList()
+>>> m
+[]
+
+Appending items to the list:
+>>> m.append(1)
+>>> m.append(4)
+>>> m.append(2)
+>>> m.append(3)
+>>> m.append(5)
+>>> m
+[1, 4, 2, 3, 5]
+
+Printing the list sorted (ascending):
+>>> m.print_sorted()
+[1, 2, 3, 4, 5]
+
+Ensuring the original list remains unsorted:
+>>> m
+[1, 4, 2, 3, 5]
