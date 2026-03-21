@@ -1,32 +1,22 @@
 ======================================
 How to Use 4-print_square
 ======================================
-How to Use 4-print_square
-======================================
 
 First import it:
     >>> print_square = __import__('4-print_square').print_square
 
-Test with 3:
-    >>> print_square(3)
-    ###
-    ###
-    ###
+    >>> print_square(2)
+    ##
+    ##
 
-Test with 0:
     >>> print_square(0)
 
-Negative:
     >>> print_square(-1)
     Traceback (most recent call last):
         ...
     ValueError: size must be >= 0
 
-Float:
     >>> print_square(3.5)
     Traceback (most recent call last):
         ...
     TypeError: size must be an integer
-
-
-
