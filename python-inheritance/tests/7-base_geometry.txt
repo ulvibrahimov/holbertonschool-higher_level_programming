@@ -2,37 +2,28 @@
 How to use BaseGeometry
 ======================================
 
-First import it:
-    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
 
-Create instance:
-    >>> bg = BaseGeometry()
+>>> bg.integer_validator("my_int", 12)
+>>> bg.integer_validator("width", 89)
 
-Test integer_validator with valid input:
-    >>> bg.integer_validator("my_int", 12)
+>>> bg.integer_validator("name", "John")
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
 
-    >>> bg.integer_validator("width", 89)
+>>> bg.integer_validator("age", 0)
+Traceback (most recent call last):
+...
+ValueError: age must be greater than 0
 
-Test with string:
-    >>> bg.integer_validator("name", "John")
-    Traceback (most recent call last):
-        ...
-    TypeError: name must be an integer
+>>> bg.integer_validator("distance", -4)
+Traceback (most recent call last):
+...
+ValueError: distance must be greater than 0
 
-Test with zero:
-    >>> bg.integer_validator("age", 0)
-    Traceback (most recent call last):
-        ...
-    ValueError: age must be greater than 0
-
-Test with negative:
-    >>> bg.integer_validator("distance", -4)
-    Traceback (most recent call last):
-        ...
-    ValueError: distance must be greater than 0
-
-Test area:
-    >>> bg.area()
-    Traceback (most recent call last):
-        ...
-    Exception: area() is not implemented
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
