@@ -12,6 +12,10 @@ Creating an empty instance:
 >>> m
 []
 
+Printing an empty list:
+>>> m.print_sorted()
+[]
+
 Appending items to the list:
 >>> m.append(1)
 >>> m.append(4)
@@ -28,3 +32,12 @@ Printing the list sorted (ascending):
 Ensuring the original list remains unsorted:
 >>> m
 [1, 4, 2, 3, 5]
+
+Testing with negative numbers:
+>>> m2 = MyList()
+>>> m2.append(10)
+>>> m2.append(-5)
+>>> m2.append(-12)
+>>> m2.append(0)
+>>> m2.print_sorted()
+[-12, -5, 0, 10]
