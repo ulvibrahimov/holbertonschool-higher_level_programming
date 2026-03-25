@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module that contains a function returning the dictionary description of an object."""
+"""Module that returns the dictionary description of an object."""
 
 
 def class_to_json(obj):
