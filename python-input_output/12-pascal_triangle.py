@@ -15,16 +15,16 @@ def pascal_triangle(n):
         return []
 
     triangle = [[1]]
-    
+
     # We already have row 1, so loop from 1 to n-1
     for i in range(1, n):
         prev_row = triangle[-1]
         new_row = [1]  # Every row starts with 1
-        
+
         # Calculate the middle numbers by looking at the previous row
         for j in range(len(prev_row) - 1):
             new_row.append(prev_row[j] + prev_row[j + 1])
-            
+
         new_row.append(1)  # Every row ends with 1
         triangle.append(new_row)
 
